@@ -1,9 +1,9 @@
 a,b=map(int,input().split())
 c=max(a,b)
-i=1
-while(1):
-    d=c*i
-    if d%a==0 and d%b==0:
-        print(d)
-        break
-    i+=1
+d=min(a,b)
+for i in range(1,d+1):
+    e=c*i
+    if e%a==0 and e%b==0:
+        print(e)
+        break;
+    
