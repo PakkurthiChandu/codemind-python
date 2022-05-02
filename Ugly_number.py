@@ -8,8 +8,9 @@ while a!=1:
     elif a%5==0:
         a=a//5
     else:
-        c=1
-        print('Not Ugly Number')
-        break
-if c==0:
+        c=c+1
+        break;
+if c!=0:
+    print('Not Ugly Number')
+else:
     print('Ugly Number')
