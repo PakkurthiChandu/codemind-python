@@ -1,8 +1,5 @@
-a=input().lower()
-b=''
-for i in range(0,len(a)):
-    if a.count(a[i])==1 and a[i]!=' ':
-        b+=a[i]
-b=sorted(b)
-for i in range(0,len(b)):
-    print(b[i],end='')
+a=input()
+c=0
+for i in range(0,26):
+    if chr(97+i) in a:
+        print(chr(97+i),end='')
