@@ -1,27 +1,18 @@
-a=int(input())
 def prime(a):
-    #import math
-    #b=math.sqrt(a)
     if a==1:
         return 0
-    else:
-        for i in range(2,a//2):
-            if a%i==0:
-                return 0
+    for i in range(2,int(a**0.5)+1):
+        if a%i==0:
+            return 0
     return 1
 def pal(a):
-    t=a
-    r=0
-    while a!=0:
-        b=a%10
-        a=a//10
-        r=r*10+b
-    if r==t:
+    b=str(a)
+    if a==int(b[::-1]):
         return 1
-    return 
+    return 0
+a=int(input())
 while 1:
     a+=1
-    if pal(a):
-        if prime(a):
-            print(a)
-            break
+    if pal(a) and prime(a):
+        print(a)
+        break
