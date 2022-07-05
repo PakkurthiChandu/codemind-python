@@ -1,12 +1,8 @@
 a=int(input())
-c=0
-for i in range(1,a):
-    p=i*(i+1)
-    if p==a:
-        c+=1
-    if p>a:
-        break
-if c!=0:
+i=1
+while i*(i+1)<a:
+    i+=1
+if i*(i+1)==a:
     print('YES')
 else:
     print('NO')
