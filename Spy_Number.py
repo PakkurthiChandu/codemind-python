@@ -4,9 +4,9 @@ p=1
 while a!=0:
     b=a%10
     a=a//10
-    s=s+b;
-    p=p*b;
-if p==s:
+    s+=b
+    p*=b
+if(p==s):
     print('Spy Number')
 else:
     print('Not Spy Number')
