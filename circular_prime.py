@@ -7,10 +7,11 @@ def prime(a):
     return 1
 a=int(input())
 b=str(a)
-c=int(b[::-1])
-if prime(a) and prime(c):
-    print('circular prime')
-elif prime(a) or prime(c):
-    print('prime but not a circular prime')
+b=int(b[::-1])
+if prime(a):
+    if prime(b):
+        print('circular prime')
+    else:
+        print('prime but not a circular prime')
 else:
     print('not prime')
