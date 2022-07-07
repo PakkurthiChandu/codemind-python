@@ -1,16 +1,18 @@
 a=int(input())
-c=0
-while a!=1:
+c=1
+while c!=0:
+    c=0
     if a%2==0:
         a=a//2
+        c=1
     elif a%3==0:
         a=a//3
+        c=1
     elif a%5==0:
         a=a//5
-    else:
-        c=c+1
-        break;
-if c!=0:
-    print('Not Ugly Number')
-else:
+        c=1
+if a==1:
     print('Ugly Number')
+else:
+    print('Not Ugly Number')
+    
