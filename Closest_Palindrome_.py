@@ -1,24 +1,21 @@
 def pal(a):
-    t=a
-    r=0
-    while a!=0:
-        b=a%10
-        a=a//10
-        r=r*10+b
-    if r==t:
+    b=str(a)
+    b=b[::-1]
+    b=int(b)
+    if a==b:
         return 1
     else:
         return 0
 a=int(input())
-for i in range(a+1,a+100):
+for i in range(a-1,a-100,-1):
     if pal(i):
         break
-for j in range(a-1,a-100,-1):
+for j in range(a+1,a+100):
     if pal(j):
         break
-if (i-a)>(a-j):
-    print(j)
-elif (i-a)==(a-j):
-    print(j,i)
-else:
+if (a-i)==(j-a):
+    print(i,j)
+elif (a-i)<(j-a):
     print(i)
+else:
+    print(j)
