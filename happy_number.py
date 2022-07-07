@@ -1,17 +1,12 @@
 a=int(input())
-s=0
-while 1:
-    
-    while a!=0:
-        b=a%10
-        a=a//10
-        s+=b*b
-    if s==1 or s==7:
-        print('True')
-        break
-    elif s<10:
-        print('False')
-        break
-    else:
-        a=s
-        s=0
+while a>9:
+    t=a
+    a=0
+    while t!=0:
+        b=t%10
+        t=t//10
+        a+=b*b
+if a==1 or a==7:
+    print('True')
+else:
+    print('False')
