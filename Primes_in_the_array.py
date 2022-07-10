@@ -1,16 +1,13 @@
 def prime(a):
     if a==1:
         return 0
-    else:
-        for i in range(2,a):
-            if a%i==0:
-                return 0
+    for i in range(2,int(a**0.5)+1):
+        if a%i==0:
+            return 0
     return 1
-c=0
 n=int(input())
-a=[n]
 a=list(map(int,input().split()))
-for i in range(0,n):
-    if prime(a[i]):
-        c+=1
-print(c)
+b=0
+for i in a:
+    b+=prime(i)
+print(b)
