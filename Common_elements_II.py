@@ -1,9 +1,9 @@
-n,m=map(int,input().split())
-a=list(map(int,input().split()))
-b=list(map(int,input().split()))
-for i in range(0,n):
-    if a[i] not in b:
-        print(a[i],end=' ')
-for i in range(0,m):
-    if b[i] not in a:
-        print(b[i],end=' ')
+a,b=map(int,input().split())
+c=list(map(int,input().split()))
+d=list(map(int,input().split()))
+for i in c:
+    if i not in d:
+        print(i,end=' ')
+for i in d:
+    if i not in c:
+        print(i,end=' ')
