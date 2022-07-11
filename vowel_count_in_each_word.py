@@ -1,3 +1,9 @@
-a=list(map(str,input().split()))
-for i in range(0,len(a)):
-    print(a[i].count('a')+a[i].count('e')+a[i].count('i')+a[i].count('o')+a[i].count('u'),end=' ')
+a=input()
+a=a.split(' ')
+b='aeiou'
+for i in a:
+    c=0
+    for j in range(0,len(i)):
+        if i[j] in b:
+            c+=1
+    print(c,end=' ')
