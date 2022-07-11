@@ -1,6 +1,4 @@
 n=int(input())
-a=[n]
 a=list(map(int,input().split()))
-b=sum(a)
-c=b/n
-print("%.2f"%c)
+b=sum(a)/n
+print("%.2f"%b)
