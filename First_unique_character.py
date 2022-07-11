@@ -1,7 +1,9 @@
-a=input()
-for i in range(0,len(a)):
-    if a.count(a[i])==1:
-        print(a[i])
+a=input().lower()
+a=a.replace(" ","")
+c=0
+for i in a:
+    if a.count(i)==1:
+        print(i)
         break
 else:
     print('-1')
