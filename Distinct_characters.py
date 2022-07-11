@@ -1,5 +1,9 @@
-a=input()
-c=0
-for i in range(0,26):
-    if chr(97+i) in a:
-        print(chr(97+i),end='')
+a=input().lower()
+a=a.replace(" ","")
+b=''
+for i in a:
+    if a.count(i)==1:
+        b+=i
+b=sorted(b)
+for i in b:
+    print(i,end='')
