@@ -1,7 +1,12 @@
-a=list(map(str,input().split()))
+a=input()
+a=a.split(' ')
 m=0
-for i in range(0,len(a)):
-    s=a[i].count('a')+a[i].count('e')+a[i].count('i')+a[i].count('o')+a[i].count('u')
-    if s>m:
-        m=s
+b='aeiou'
+for i in a:
+    c=0
+    for j in range(0,len(i)):
+        if i[j] in b:
+            c+=1
+    if c>m:
+        m=c
 print(m)
