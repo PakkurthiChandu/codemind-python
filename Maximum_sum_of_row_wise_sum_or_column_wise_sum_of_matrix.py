@@ -1,20 +1,19 @@
-n,m=map(int,input().split())
-a=[]
-s=0
-d=0
-e=0
-for i in range(0,n):
-    b=list(map(int,input().split()))
-    if sum(b)>s:
-        s=sum(b)
-    a.append(b)
-for i in range(0,m):
-    for j in range(0,n):
-        d+=a[j][i]
-    if d>e:
-        e=d
-    e=0
-if s>e:
-    print(s)
+a,b=map(int,input().split())
+c=[]
+ma=0
+for i in range(0,a):
+    d=list(map(int,input().split()))
+    if sum(d)>ma:
+        ma=sum(d)
+    c.append(d)
+m=0
+for i in range(0,b):
+    s=0
+    for j in range(0,a):
+        s+=c[j][i]
+    if s>m:
+        m=s
+if ma>m:
+    print(ma)
 else:
-    print(e)
+    print(m)
