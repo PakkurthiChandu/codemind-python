@@ -1,11 +1,11 @@
 a=input().lower()
-b=a.split(' ')
-d=0
-for i in range(0,len(b[0])):
+a=a.split(' ')
+b=''
+for i in a[0]:
     c=0
-    for j in range(0,len(b)):
-        if b[0][i] in b[j]:
+    for j in a:
+        if i in j:
             c+=1
-    if c==len(b):
-        d+=1
-print(d)
+    if c==len(a):
+        b+=i
+print(len(b))
