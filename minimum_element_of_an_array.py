@@ -1,4 +1,3 @@
-a=int(input())
-b=[a]
-b=list(map(int,input().split()))
-print(min(b))
+n=int(input())
+a=list(map(int,input().split()))
+print(min(a))
