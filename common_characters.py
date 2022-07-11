@@ -1,16 +1,14 @@
 a=input().lower()
 b=input().lower()
+a=a.replace(" ",'')
+b=b.replace(' ','')
 c=''
-f=0
-d=list(set(a)&set(b))
-for i in d:
-    if i==' ':
-        continue
-    c+=i
-    f=1
-e=sorted(c)
-if f==0:
+for i in a:
+    if i in b and i not in c:
+        c+=i
+c=sorted(c)
+if len(c)==0:
     print('-1')
 else:
-    for i in e:
+    for i in c:
         print(i,end='')
