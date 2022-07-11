@@ -1,13 +1,10 @@
 n=int(input())
 a=list(map(int,input().split()))
-b=[]
-c=[]
+e=[]
 for i in range(0,n):
     if a[i]%2==0:
-        b.append(a[i])
-    else:
-        c.append(a[i])
-for i in range(0,len(b)):
-    print(b[i],end=' ')
-for i in range(0,len(c)):
-    print(c[i],end=' ')
+        e.append(a[i])
+print(*e,end=' ')
+for i in a:
+    if i not in e:
+        print(i,end=' ')
