@@ -1,12 +1,14 @@
 a=input().lower()
 b=input().lower()
-f=''
-for i in range(0,len(a)):
-    if a[i] not in b and a[i] not in f and a[i]!=' ':
-        f+=a[i]
-for i in range(0,len(b)):
-    if b[i] not in a and b[i] not in f and b[i]!=' ':
-        f+=b[i]
-f=sorted(f)
-for i in range(0,len(f)):
-    print(f[i],end='')
+a=a.replace(" ","")
+b=b.replace(" ","")
+c=''
+for i in a:
+    if i not in b and i not in c:
+        c+=i
+for i in b:
+    if i not in a and i not in c:
+        c+=i
+c=sorted(c)
+for i in c:
+    print(i,end='')
