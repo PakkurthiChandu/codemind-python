@@ -1,6 +1,6 @@
 a=input()
-for i in range(0,len(a)):
-    if a.count(a[i])!=1:
+for i in a:
+    if a.count(i)!=1:
         print('False')
         break
 else:
