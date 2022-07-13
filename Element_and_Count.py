@@ -4,5 +4,8 @@ b=[]
 for i in a:
     if i not in b:
         b.append(i)
+c=[]
 for i in b:
-    print(i,a.count(i),end=' ')
+    c.append(i)
+    c.append(a.count(i))
+print(*c)
