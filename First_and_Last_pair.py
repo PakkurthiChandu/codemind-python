@@ -1,11 +1,16 @@
 n=int(input())
-a=[n]
 a=list(map(int,input().split()))
-j=n-1
-for i in range(0,n//2):
-    print(a[i],end=' ')
-    print(a[j],end=' ')
-    j-=1
+b=a[0:n//2]
+c=a[n//2:n]
+c=c[::-1]
+i=0
+j=0
+while i<len(b) or j<len(c):
+    if i<len(b):
+        print(b[i],end=' ')
+    if j<len(c):
+        print(c[i],end=' ')
+    i+=1
+    j+=1
 if n%2!=0:
-    print(a[n//2],end=' ')
-    print('0',end=' ')
+    print('0')
