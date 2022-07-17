@@ -1,20 +1,21 @@
-a=int(input())
-b=list(map(int,input().split()))
-c=[]
-d=[]
-for i in range(0,a):
-    if b[i]%2==0:
-        c.append(b[i])
+n=int(input())
+a=list(map(int,input().split()))
+e=[]
+o=[]
+for i in range(0,len(a)):
+    if a[i]%2==0:
+        e.append(a[i])
     else:
-        d.append(b[i])
+        o.append(a[i])
 i=0
 j=0
-while(i<len(d) or j<len(c)):
-    if i<len(d):
-        print(d[i],end=' ')
-    if j<len(c):
-        print(c[i],end=' ')
+while i<len(e) or j<len(o):
+    if j<len(o):
+        print(o[j],end=' ')
+    if i<len(e):
+        print(e[i],end=' ')
+    
     i+=1
     j+=1
-if a%2!=0:
+if n%2!=0:
     print('0')
